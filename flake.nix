@@ -11,8 +11,8 @@
       let
         pkgs = import nixpkgs { inherit system; };
         lib = pkgs.lib;
-        py = pkgs.python311;
-        pyPkgs = pkgs.python311Packages;
+        py = pkgs.python3;
+        pyPkgs = pkgs.python3Packages;
         pname = "modularcalculator";
         version = "1.5.0";
       in rec {
