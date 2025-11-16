@@ -16,7 +16,7 @@
         pname = "modularcalculator";
         version = "1.5.0";
       in rec {
-        packages.${pname} = pyPkgs.buildPythonPackage rec {
+        packages.python3Packages.${pname} = pyPkgs.buildPythonPackage rec {
           inherit pname version;
           src = self;
           pyproject = true;
@@ -41,6 +41,6 @@
           };
         };
 
-        defaultPackage = packages.${pname};
+          defaultPackage = packages.python3Packages.${pname};
       });
 }
